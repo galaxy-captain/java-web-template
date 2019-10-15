@@ -14,6 +14,9 @@
     <modules>
         <module>framework-web</module>
         <module>framework-registry</module>
+        <module>framework-http</module>
+        <module>framework-rpc</module>
+        <module>framework-config</module>
     </modules>
 
     <properties>
