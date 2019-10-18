@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <property name="encoding" value="UTF-8"/>
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+
+    <property name="log-pattern"
+              value="[%-5p] [%d{yyyy-MM-dd HH:mm:ss.SSS}] [${springAppName:-AppName},%X{X-B3-TraceId:-TraceId},%X{X-B3-SpanId:-SpanId},%X{X-Span-Export:-Export}] ${PID:- } - [%thread] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log-pattern}</pattern>
+            <charset>${encoding}</charset>
+        </encoder>
+    </appender>
+
+    <springProfile name="dev">
+        <root level="INFO">
+            <appender-ref ref="console"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="prd">
+        <appender name="file-main" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${LOG_FILE}/${SERVICE_NAME}.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_FILE}/${SERVICE_NAME}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+                <maxHistory>15</maxHistory>
+                <maxFileSize>500MB</maxFileSize>
+            </rollingPolicy>
+            <encoder>
+                <pattern>${log-pattern}</pattern>
+                <charset>${encoding}</charset>
+            </encoder>
+        </appender>
+        <root level="INFO">
+            <appender-ref ref="console"/>
+            <appender-ref ref="file-main"/>
+        </root>
+    </springProfile>
+
+</configuration>

@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+feign:
+  http:
+    connect-timeout: 10000
+    read-timeout: 10000
+    write-timeout: 10000
+    max-idle: 10
+    max-alive: 60000
