@@ -1,0 +1,40 @@
+{
+  "groups": [
+    {
+      "name": "feign.http",
+      "description": "Feign中http的属性配置"
+    }
+  ],
+  "properties": [
+    {
+      "name": "feign.http.connectTimeout",
+      "type": "java.lang.Long",
+      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
+      "defaultValue": 10000
+    },
+    {
+      "name": "feign.http.readTimeout",
+      "type": "java.lang.Long",
+      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
+      "defaultValue": 10000
+    },
+    {
+      "name": "feign.http.writeTimeout",
+      "type": "java.lang.Long",
+      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
+      "defaultValue": 10000
+    },
+    {
+      "name": "feign.http.maxIdle",
+      "type": "java.lang.Integer",
+      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
+      "defaultValue": 5
+    },
+    {
+      "name": "feign.http.maxAlive",
+      "type": "java.lang.Long",
+      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
+      "defaultValue": 300000
+    }
+  ]
+}
