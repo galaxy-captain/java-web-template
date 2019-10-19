@@ -28,6 +28,7 @@
         <module>framework-rpc</module>
         <module>framework-config</module>
         <module>framework-core</module>
+        <module>framework-gateway</module>
     </modules>
 
     <properties>
