@@ -1,12 +1,13 @@
 package me.galaxy.framework.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+
 @PropertySource("my.properties")
-@EnableAutoConfiguration
+@RefreshScope
 @Configuration
 public class MyConfiguration {
 
