@@ -6,4 +6,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/galaxy-captain/java-web-template/blob/master/framework-config/src/main/resources/my.properties
+          uri: https://github.com/galaxy-captain/java-web-template
+          search-paths: /master/framework-config/src/main/resources/my.properties
