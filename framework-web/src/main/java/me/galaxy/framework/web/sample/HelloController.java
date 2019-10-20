@@ -1,6 +1,7 @@
 package me.galaxy.framework.web.sample;
 
 import lombok.extern.slf4j.Slf4j;
+import me.galaxy.framework.core.exception.ServiceException;
 import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,6 +34,11 @@ public class HelloController {
         log.info("test MDC");
 
         return feignProxy.invokeHelloWorld();
+    }
+
+    @GetMapping("/test/exception")
+    public String testException(){
+        throw new RuntimeException("测试异常");
     }
 
 }

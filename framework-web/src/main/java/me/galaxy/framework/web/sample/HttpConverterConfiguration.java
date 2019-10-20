@@ -27,14 +27,14 @@ public class HttpConverterConfiguration implements WebMvcConfigurer {
     @Bean
     public FastJsonHttpMessageConverter fastJsonHttpMessageConverter() {
 
-        FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
-
         FastJsonConfig config = new FastJsonConfig();
         config.setCharset(StandardCharsets.UTF_8);
-        converter.setFastJsonConfig(config);
 
         List<MediaType> fastMediaTypes = new ArrayList<>();
         fastMediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
+
+        FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter();
+        converter.setFastJsonConfig(config);
         converter.setSupportedMediaTypes(fastMediaTypes);
 
         return converter;
