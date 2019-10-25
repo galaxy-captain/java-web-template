@@ -1,8 +1,6 @@
-package me.galaxy.framework.web.sample;
+package me.galaxy.framework.web.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import me.galaxy.framework.core.exception.ServiceException;
-import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

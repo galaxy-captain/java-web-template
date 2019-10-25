@@ -27,8 +27,9 @@
         <module>framework-http</module>
         <module>framework-rpc</module>
         <module>framework-config</module>
-        <module>framework-core</module>
+        <module>framework-foundation</module>
         <module>framework-gateway</module>
+        <module>framework-sample</module>
     </modules>
 
     <properties>

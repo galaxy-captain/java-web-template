@@ -1,40 +1,40 @@
 {
   "groups": [
     {
-      "name": "feign.http",
-      "description": "Feign中http的属性配置"
+      "name": "http.client",
+      "description": "HttpClient的属性配置"
     }
   ],
   "properties": [
     {
-      "name": "feign.http.connectTimeout",
-      "type": "java.lang.Long",
-      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
-      "defaultValue": 10000
-    },
-    {
-      "name": "feign.http.readTimeout",
-      "type": "java.lang.Long",
-      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
-      "defaultValue": 10000
-    },
-    {
-      "name": "feign.http.writeTimeout",
-      "type": "java.lang.Long",
-      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
-      "defaultValue": 10000
-    },
-    {
-      "name": "feign.http.maxIdle",
+      "name": "http.client.connectionRequestTimeout",
       "type": "java.lang.Integer",
-      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
-      "defaultValue": 5
+      "sourceType": "me.galaxy.framework.http.HttpClientConfiguration",
+      "defaultValue": 10000
     },
     {
-      "name": "feign.http.maxAlive",
-      "type": "java.lang.Long",
-      "sourceType": "me.galaxy.framework.http.FeignHttpConfiguration",
-      "defaultValue": 300000
+      "name": "http.client.connectTimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "me.galaxy.framework.http.HttpClientConfiguration",
+      "defaultValue": 10000
+    },
+    {
+      "name": "http.client.socketTimeout",
+      "type": "java.lang.Integer",
+      "sourceType": "me.galaxy.framework.http.HttpClientConfiguration",
+      "defaultValue": 30000
+    },
+    {
+      "name": "http.client.poolTotalMax",
+      "type": "java.lang.Integer",
+      "sourceType": "me.galaxy.framework.http.HttpClientConfiguration",
+      "defaultValue": 256
+    },
+    {
+      "name": "http.client.poolRouteMax",
+      "type": "java.lang.Integer",
+      "sourceType": "me.galaxy.framework.http.HttpClientConfiguration",
+      "defaultValue": 32
     }
   ]
 }

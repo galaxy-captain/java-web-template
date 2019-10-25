@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @Description
+ * @Description Web全局异常处理
  * @Author galaxy-captain
  * @Date 2019-10-20 14:43
  **/

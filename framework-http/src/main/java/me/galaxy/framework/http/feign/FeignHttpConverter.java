@@ -1,4 +1,4 @@
-package me.galaxy.framework.http;
+package me.galaxy.framework.http.feign;
 
 import feign.codec.Decoder;
 import feign.codec.Encoder;

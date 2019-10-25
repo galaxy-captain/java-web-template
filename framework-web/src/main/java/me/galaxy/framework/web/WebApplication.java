@@ -1,19 +1,16 @@
 package me.galaxy.framework.web;
 
-import me.galaxy.framework.http.FeignHttpConverter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @Description
- * @Author galaxy-captain
- * @Date 2019-10-15 22:07
+ * @Author duanxiaolei@bytedance.com
+ * @Date 2019-10-24 15:25
  **/
-@EnableConfigurationProperties
-@EnableFeignClients(basePackages = "me.galaxy.framework.web", defaultConfiguration = {FeignHttpConverter.class})
-@SpringBootApplication(scanBasePackages = "me.galaxy.framework")
+@EnableFeignClients(basePackages = "me.galaxy.framework.web")
+@SpringBootApplication(scanBasePackages = "me.galaxy.framework.web")
 public class WebApplication {
 
     public static void main(String[] args) {
